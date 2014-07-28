@@ -1,0 +1,5 @@
+Name: OOC Union
+Description: Example demonstrating unexpected behavior when using "union" as a method name.
+SourcePath: source
+Requires: ooc-unit
+Imports: Point

@@ -1,5 +1,5 @@
 Name: OOC Incomplete Return Type
-Description: Math functionality library.
+Description: Example demonstrating unexpected behavior when implementing non-static get methods that return a cover of the type "This".
 SourcePath: source
 Requires: ooc-unit
 Imports: Point
