@@ -21,6 +21,6 @@
 *.i*86
 *.x86_64
 *.hex
-/unary-minus/.libs/
-/unary-minus/rock_tmp/
+.libs/
+rock_tmp/
 *~

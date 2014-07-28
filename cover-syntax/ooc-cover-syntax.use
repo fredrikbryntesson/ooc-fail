@@ -1,4 +1,4 @@
-Name: OOC Unary Minus
+Name: OOC Cover Syntax
 Description: Math functionality library.
 SourcePath: source
 Requires: ooc-unit
