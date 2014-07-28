@@ -23,3 +23,4 @@
 *.hex
 /unary-minus/.libs/
 /unary-minus/rock_tmp/
+*~
