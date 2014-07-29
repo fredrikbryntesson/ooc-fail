@@ -17,10 +17,10 @@ import math
 import text/StringTokenizer
 
 // Does not build
-//PointCoverA : cover {
-//	x, y: Float
-//	Norm ::= (this x pow(2.0f) + this y pow(2.0f)) sqrt()
-//}
+PointCoverA : cover {
+	x, y: Float
+	Norm ::= (this x pow(2.0f) + this y pow(2.0f)) sqrt()
+}
 
 // Builds just fine
 PointCoverB: cover {

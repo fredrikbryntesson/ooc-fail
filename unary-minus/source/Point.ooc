@@ -47,24 +47,24 @@ PointC: cover {
 }
 
 //	Does NOT build, "error Argl, you need 2 arguments to override the '-' operator, not 1"
-//PointD: cover {
-//	x, y: Float
-//	init: func@ (=x, =y)
-//	difference: func (other: This) -> This { this - other }
-//	operator + (other: This) -> This { This new(this x + other x, this y + other y) }
-//	operator - (other: This) -> This { This new(this x - other x, this y - other y) }
-//	operator - -> This { This new(-this x, -this y) }
-//}
+PointD: cover {
+	x, y: Float
+	init: func@ (=x, =y)
+	difference: func (other: This) -> This { this - other }
+	operator + (other: This) -> This { This new(this x + other x, this y + other y) }
+	operator - (other: This) -> This { This new(this x - other x, this y - other y) }
+	operator - -> This { This new(-this x, -this y) }
+}
 
 //	Does NOT build, even though we're actually just subtracting a Float from a Float
-//PointE: cover {
-//	x, y: Float
-//	init: func@ (=x, =y)
-//	difference: func (other: This) -> This { this - other }
-//	operator + (other: This) -> This { This new(this x + other x, this y + other y) }
-//	operator - (other: This) -> This { This new(this x - (other x), this y - (other y)) }
-//	operator - -> This { This new(-this x, -this y) }
-//}
+PointE: cover {
+	x, y: Float
+	init: func@ (=x, =y)
+	difference: func (other: This) -> This { this - other }
+	operator + (other: This) -> This { This new(this x + other x, this y + other y) }
+	operator - (other: This) -> This { This new(this x - (other x), this y - (other y)) }
+	operator - -> This { This new(-this x, -this y) }
+}
 
 // Builds, but requires use of the unary minus operator, cannot use the binary one
 PointF: cover {

@@ -17,12 +17,6 @@
 import math
 import text/StringTokenizer
 
-// The 2D transform is a 3x3 homogeneous coordinate matrix.
-// The element order is:
-// A D G
-// B E H
-// C F I
-
 // Builds just fine
 PointA: cover {
 	x, y: Float
@@ -31,11 +25,11 @@ PointA: cover {
 }
 
 // Does not build, "error: field ‘Negative’ has incomplete type"
-//PointB: cover {
-//	x, y: Float
-//	init: func@ (=x, =y)
-//	Negative: This { get { This new(-this x, -this y) } }
-//}
+PointB: cover {
+	x, y: Float
+	init: func@ (=x, =y)
+	Negative: This { get { This new(-this x, -this y) } }
+}
 
 // Builds just fine, but obviously doesn't do what I want
 PointC: cover {
@@ -45,8 +39,8 @@ PointC: cover {
 }
 
 // Does not build, since static methods obviously do not have access to instance variables
-//PointD: cover {
-//	x, y: Float
-//	init: func@ (=x, =y)
-//	Negative: static This { get { This new(-this x, -this y) } }
-//}
+PointD: cover {
+	x, y: Float
+	init: func@ (=x, =y)
+	Negative: static This { get { This new(-this x, -this y) } }
+}
