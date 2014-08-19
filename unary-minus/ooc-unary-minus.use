@@ -1,5 +1,0 @@
-Name: OOC Unary Minus
-Description: Example demonstrating unexpected behavior from unary minus operator overloads.
-SourcePath: source
-Requires: ooc-unit
-Imports: Point

@@ -1,5 +1,0 @@
-Name: OOC Cover Syntax
-Description: Example demonstrating unexpected behavior when using the ::= operator in covers.
-SourcePath: source
-Requires: ooc-unit
-Imports: Point
