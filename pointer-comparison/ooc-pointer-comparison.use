@@ -1,0 +1,5 @@
+Name: OOC Pointer Comparison
+Description: Example demonstrating unexpected behavior when comparing pointers.
+SourcePath: source
+Requires: ooc-unit
+Imports: Color
