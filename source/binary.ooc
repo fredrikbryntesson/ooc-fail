@@ -14,8 +14,10 @@ for (i in 0..404496)
 
 seqR := BinarySequenceReader new(FileReader new(file))
 data := seqR bytes(404496)
-for (i in 0..404496)
+for (i in 0..404496) {
 	if ((data + i)@ == 0) {
 		"#{i} is 0!" println()
+		// Fails at 401408 on APID
 		break
 	}
+}
